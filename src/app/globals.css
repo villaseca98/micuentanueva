@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "@fontsource-variable/onest";
+
+/*
+  Mi Cuenta Nueva · identidad minimalista
+  Papel casi blanco, tinta casi negra para los botones, un único verde profundo de acento
+  y líneas finas en lugar de sombras.
+*/
+@theme {
+  --font-sans: "Onest Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #fafaf8;
+  --color-ink: #0f1412;
+  --color-accent: #0f6b58;
+  --color-accent-soft: #ebf3ef;
+  --color-warm: #fbf6ea;
+
+  --color-muted-50: #f7f7f6;
+  --color-muted-100: #efefed;
+  --color-muted-200: #e3e3e0;
+  --color-muted-300: #cfcfcb;
+  --color-muted-400: #a3a39f;
+  --color-muted-500: #73736f;
+  --color-muted-600: #575754;
+  --color-muted-700: #3d3d3b;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+}
+
+.display {
+  letter-spacing: -0.035em;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+.rail {
+  scrollbar-width: none;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
